@@ -1,6 +1,105 @@
 <?xml version="1.0" encoding="utf-16"?>
-<Page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Background="#FFFFFF" Title="HomePage" SetAsStartupPage="true" isHidden="false" DesignHeight="320" DesignWidth="400">
+<Page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+	  Background="#FFFFFF" 
+	  Title="HomePage"
+	  Icon="HomeIcon"
+	  SetAsStartupPage="true" 
+	  isHidden="false" 
+	  DesignHeight="400" 
+	  DesignWidth="800">
+  
   <Controls>
-    <Label Name="helloLabel" Grid.Column="5" Grid.Row="1" Grid.RowSpan="1" Grid.ColumnSpan="2" Background="default" Height="0" Width="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Text="Hello inView" FontFamily="Calibri" FontSize="12" FontColor="#111111" TextAlignment="Center" />
+    <Button Grid.Column="1" 
+    		Grid.Row="1" 
+    		Grid.RowSpan="2" 
+    		Grid.ColumnSpan="3" 
+    		Height="0" Width="0" 
+    		HorizontalAlignment="Stretch" 
+    		VerticalAlignment="Stretch" 
+    		FontFamily="Calibri" 
+    		FontSize="14" 
+    		FontColor="#FFFFFF" 
+    		 HoverColor="#31A5FF"
+    		TextAlignment="Center"
+    		Text="Otwórz wykres temperatury">
+    	<OnClick>
+    		<OpenPage Page="SecondPage"/>
+    	</OnClick>
+    </Button>
+    
+    
+    <Button Grid.Column="1" 
+    		Grid.Row="4" 
+    		Grid.RowSpan="2" 
+    		Grid.ColumnSpan="3" 
+    		
+    		Height="0" Width="0" 
+    		HorizontalAlignment="Stretch" 
+    		VerticalAlignment="Stretch" 
+    		FontFamily="Calibri" 
+    		FontSize="14" 
+    		FontColor="#FFFFFF" 
+    		HoverColor="#31A5FF"
+    		TextAlignment="Center"
+    		Text="Otwórz zarzadzanie Led">
+    	<OnClick>
+    		<GoToPage Page="ThirdPage"/>
+    	</OnClick>
+    </Button>
+    
+    
+    
+  	
+  	
+  		   
+   <Label Text="Temperatura: "
+  		   Grid.ColumnSpan="2"
+  		   Grid.Column="0"
+  		   Grid.Row="7"
+  		   HorizontalAlignment="Stretch" 
+    	   VerticalAlignment="Stretch" 
+    	   FontFamily="Calibri" 
+    	   FontSize="20" 
+    	   FontColor="#000000" 
+    	   TextAlignment="Right"/>
+  		   
+    <Label Grid.Column="2" 
+    	Grid.Row="7" 
+    	Grid.ColumnSpan="3" 
+    	Text="{Binding Temp}"  
+    	FontColor="#FF2E31"
+    	HorizontalAlignment="Stretch" 
+    	   VerticalAlignment="Stretch" 
+    	   FontFamily="Calibri" 
+    	   FontSize="20" 
+    	   TextAlignment="Center"/>
+    
+    <Label Text="Wilgotność: "
+  		   Grid.ColumnSpan="2"
+  		   Grid.Column="0"
+  		   Grid.Row="9"
+  		   HorizontalAlignment="Stretch" 
+    	   VerticalAlignment="Stretch" 
+    	   FontFamily="Calibri" 
+    	   FontSize="20" 
+    	   FontColor="#000000" 
+    	   TextAlignment="Right"/>
+  		   
+    <Label Grid.Column="2" Grid.Row="9" Grid.ColumnSpan="3" Text="{Binding Humi}" TextAlignment="Center" 
+    		FontColor="#FF2E31"
+    		HorizontalAlignment="Stretch" 
+    	   VerticalAlignment="Stretch" 
+    	   FontFamily="Calibri" 
+    	   FontSize="20" />
+  	
+  	
+    
+    
+  	
+  	<Chart Grid.Column="5" Grid.Row="0" Grid.RowSpan="6" Grid.ColumnSpan="7" Variable="Led2" From="2017-03-03" To="2017-04-04" Type="Static" MinY="0" MaxY="20" StepY="5" Smoothness="0"/>
+  	
+  	
+  	
+  
   </Controls>
 </Page>

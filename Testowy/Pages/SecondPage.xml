@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-16"?>
+<Page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Background="#FFFFFF" Title="SecondPage" SetAsStartupPage="true" isHidden="false" DesignHeight="320" DesignWidth="400">
+  <Controls>
+    <Label Name="helloLabel" Grid.Column="5" Grid.Row="1" Grid.RowSpan="1" Grid.ColumnSpan="2" Background="default" Height="0" Width="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Text="Hello inView" FontFamily="Calibri" FontSize="12" FontColor="#111111" TextAlignment="Center" />
+  </Controls>
+</Page>
