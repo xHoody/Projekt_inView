@@ -7,7 +7,7 @@
   	</Description>
 
   	<Connectors>
-	  <Connector Type="ModbusTCP" Name="Test" Port="502" IP="localhost"/>
+	  <Connector Type="ModbusTCP" Name="Test" Port="502" IP="192.168.0.175"/>
   	</Connectors>
 
   	<Variables>
