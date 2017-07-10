@@ -1,4 +1,35 @@
 <?xml version="1.0" encoding="utf-16"?>
 <Config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <AllowDebug>false</AllowDebug>
+  
+  <Description>
+    	Jest to projekt testowy stworzony na potrzeby pokazów.
+  	</Description>
+
+  	<Connectors>
+	  <Connector Type="ModbusTCP" Name="Test" Port="502" IP="localhost"/>
+  	</Connectors>
+
+  	<Variables>
+  	  <var Type="Int32" Name="Led2" Value="{Binding Test(2)}">
+  	  	<SavePeriod>10</SavePeriod>
+  		</var>
+	  <var Type="Int32" Name="Led3" Value="{Binding Test(3)}">
+  		</var>
+	  <var Type="Int32" Name="Led4" Value="{Binding Test(4)}">
+  		</var>
+	  <var Type="Int32" Name="Led5" Value="{Binding Test(5}">
+  		</var>
+	  <var Type="Int32" Name="Led6" Value="{Binding Test(6)}">
+  		</var>
+	  <var Type="Int32" Name="Switch" Value="{Binding Test(26)}">
+  		</var>
+	  <var Type="Int32" Name="Temp" Value="{Binding Test(28)}">
+  		</var>
+  	  <var Type="Int32" Name="Humi" Value="{Binding Test(29)}">
+  		</var>
+  	  <var Type="Int32" Name="intTest">
+  		</var>
+  	</Variables>
+  
 </Config>
